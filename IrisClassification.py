@@ -59,7 +59,7 @@ if st.button('Predict'):
     with col4:
         input_data = pd.DataFrame(
     
-        {'sepal_length': [sepal_length], 'sepal_width': [sepal_width], 'petal_length': [petal_length], 'petal_width': [petal_width]},
+        {'sepal_length_(cm)': [sepal_length], 'sepal_width_(cm)': [sepal_width], 'petal_length_(cm)': [petal_length], 'petal_width_(cm)': [petal_width]},
          index=[0]
     )
         st.write(input_data)
@@ -68,7 +68,14 @@ if st.button('Predict'):
 
         prediction = model.predict(pipelined_data)
 
+        if prediction[0] == 0:
+            prediction_text = 'Setosa'
+        elif prediction[0] == 1:
+            prediction_text = 'Versicolor'
+        elif prediction[0] == 2:
+            prediction_text = 'Virginica'
+
         col6, col7, col8 = st.columns(3)
 
         with col7:
-            st.markdown('<h2 style="text-align: center;"> The predicted Iris is ' + str(prediction[0]) + ' </h2>', unsafe_allow_html=True)
+            st.markdown('<h2 style="text-align: center;"> The predicted Iris is ' + str(prediction_text) + ' </h2>', unsafe_allow_html=True)
