@@ -1,8 +1,9 @@
-# 🎈 Blank app template
+# An iris prediction model based on flower properties
 
-A simple Streamlit app template for you to modify!
+This is a small application that predicts a type of iris based on multiple variables, using logistic regression to achieve this
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://irisclassification-qmrjl8zkbypcggcqmxewjz.streamlit.app/)
 
 ### How to run it on your own machine
 
